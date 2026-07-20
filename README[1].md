@@ -4,7 +4,7 @@ My 15-day Frontend Developer internship log at **Zyora Byte** — starting with 
 
 ## About me
 
-I'm Vaishnavi PS, a second-year B.Tech Artificial Intelligence & Data Science student at Arunachala College of Engineering for Women, Kanyakumari. I came into this internship with a Python/ML background and some prior frontend experience (HTML, CSS, JS) from an internship at Alo Infotech, and I'm here to get serious about frontend development.
+I'm Vaishnavi PS, a third-year B.Tech Artificial Intelligence & Data Science student at Arunachala College of Engineering for Women, Kanyakumari. I came into this internship with a Python/ML background and some prior frontend experience (HTML, CSS, JS) from an internship at Alo Infotech, and I'm here to get serious about frontend development.
 
 ## What's in this repo
 
@@ -19,10 +19,15 @@ I'm Vaishnavi PS, a second-year B.Tech Artificial Intelligence & Data Science st
 - [x] Wrote this README
 - [x] Made 3 separate, meaningful commits instead of one "final" commit
 
-## Why separate commits matter
 
-A single "final" commit hides the story of how something was built. Small, meaningful commits (`add page structure` → `add intro content` → `write readme`) make a repo's history readable — anyone (including future me) can see exactly what changed, when, and why, and roll back to any point if something breaks.
+## Day 2
 
-## Follow along
+- [x] Upgraded `index.html` into a real multi-section site (pure HTML, no CSS yet)
+- [x] Added `<nav>` with jump links to each section
+- [x] Added About, Skills, Education, Roadmap, and Contact sections
+- [x] Skills as a proper `<ul>` list, Education as a `<table>`
+- [x] Contact section with a labeled `<form>` (name, email, message — not wired up yet)
+- [x] Semantic tags throughout: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>` — no div soup
+- [x] Alt text on the profile image
+- [x] 3+ separate, meaningful commits
 
-This README will grow day by day as the internship progresses.
