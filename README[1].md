@@ -4,7 +4,7 @@ My 15-day Frontend Developer internship log at **Zyora Byte** — starting with 
 
 ## About me
 
-I'm Vaishnavi PS, a third-year B.Tech Artificial Intelligence & Data Science student at Arunachala College of Engineering for Women, Kanyakumari. I came into this internship with a Python/ML background and some prior frontend experience (HTML, CSS, JS) from an internship at Alo Infotech, and I'm here to get serious about frontend development.
+I'm Vaishnavi PS, a second-year B.Tech Artificial Intelligence & Data Science student at Arunachala College of Engineering for Women, Kanyakumari. I came into this internship with a Python/ML background and some prior frontend experience (HTML, CSS, JS) from an internship at Alo Infotech, and I'm here to get serious about frontend development.
 
 ## What's in this repo
 
@@ -29,5 +29,15 @@ I'm Vaishnavi PS, a third-year B.Tech Artificial Intelligence & Data Science stu
 - [x] Contact section with a labeled `<form>` (name, email, message — not wired up yet)
 - [x] Semantic tags throughout: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>` — no div soup
 - [x] Alt text on the profile image
+- [x] 3+ separate, meaningful commits
+
+## Day 3
+
+- [x] Created `style.css` and linked it with `<link rel="stylesheet">`
+- [x] One color scheme (navy ink + teal + amber) and one font pairing (Space Grotesk + IBM Plex Sans) across the whole page
+- [x] Nav styled as a horizontal flexbox bar — brand left, links right
+- [x] Skills list turned into flexbox cards with padding, border-radius, and a hover effect
+- [x] Education table and contact form styled — spacing, borders, readable inputs
+- [x] Deliberate box model: consistent padding inside cards, margin between sections
 - [x] 3+ separate, meaningful commits
 
