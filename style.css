@@ -1,0 +1,267 @@
+/* ===========================================================
+   style.css — Day 3: Box Model & Flexbox
+   Color scheme (3 colors): navy ink, teal accent, amber accent
+   Font pairing: Space Grotesk (headings) + IBM Plex Sans (body)
+   =========================================================== */
+
+:root {
+  --ink: #0E141F;         /* page background */
+  --ink-raised: #161E2C;  /* cards, table, nav background */
+  --paper: #E9EDF3;       /* body text */
+  --muted: #7C8798;       /* secondary text */
+  --teal: #2DD9C4;        /* accent 1 */
+  --amber: #F5A623;       /* accent 2 */
+  --line: #2A3444;        /* borders */
+}
+
+/* ---------- Reset-ish basics ---------- */
+* {
+  box-sizing: border-box; /* padding/border included in element width — deliberate box-model choice */
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+a {
+  color: var(--teal);
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 48px 24px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 8px;
+}
+
+header p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Nav: flexbox horizontal bar, logo left / links right ---------- */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--ink-raised);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+}
+
+.site-nav .brand {
+  color: var(--amber);
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--paper);
+  font-weight: 500;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 40px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 24px 0 12px;
+}
+
+#about img {
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  margin-bottom: 16px;
+}
+
+/* ---------- Skills: flexbox cards ---------- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-grid li {
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 18px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skills-grid li:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 18px rgba(45, 217, 196, 0.18);
+}
+
+/* ---------- Education table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+caption {
+  text-align: left;
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+thead th {
+  color: var(--teal);
+  font-family: 'Space Grotesk', sans-serif;
+  background: rgba(45, 217, 196, 0.06);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Roadmap ---------- */
+#roadmap ol {
+  padding-left: 20px;
+}
+
+#roadmap li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Contact form ---------- */
+#contact p {
+  color: var(--muted);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 480px;
+  margin-top: 16px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--paper);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(45, 217, 196, 0.15);
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background: var(--teal);
+  color: var(--ink);
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--amber);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
