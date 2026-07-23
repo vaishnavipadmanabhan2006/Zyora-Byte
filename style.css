@@ -14,6 +14,17 @@
   --line: #2A3444;        /* borders */
 }
 
+/* Light theme: overrides the same custom properties when JS adds
+   this class to <body>. Everything else in the file keeps using
+   var(--ink), var(--paper), etc. so it repaints automatically. */
+body.light-mode {
+  --ink: #F5F3EE;
+  --ink-raised: #FFFFFF;
+  --paper: #1B2430;
+  --muted: #6B7280;
+  --line: #DEDAD0;
+}
+
 /* ---------- Reset-ish basics ---------- */
 * {
   box-sizing: border-box; /* padding/border included in element width — deliberate box-model choice */
@@ -95,6 +106,23 @@ header p {
 .nav-links a:hover {
   color: var(--teal);
   border-bottom-color: var(--teal);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--paper);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--teal);
+  color: var(--teal);
 }
 
 /* ---------- Main layout ---------- */
@@ -255,6 +283,29 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: var(--amber);
+}
+
+.error-message {
+  min-height: 1.1em;
+  color: #FF7A7A;
+  font-size: 0.8rem;
+}
+
+.input-error {
+  border-color: #FF7A7A !important;
+}
+
+.form-status {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.form-status.success {
+  color: var(--teal);
+}
+
+.form-status.error {
+  color: #FF7A7A;
 }
 
 /* ---------- Footer ---------- */
