@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -24,6 +25,7 @@
       <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light mode">🌙 Dark mode</button>
   </nav>
 
   <main>
@@ -124,20 +126,24 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>This form doesn't submit anywhere yet — we're wiring that up on Day 5.</p>
-      <form>
+      <form id="contact-form" novalidate>
         <div>
           <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name">
+          <span class="error-message" id="name-error"></span>
         </div>
         <div>
           <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email">
+          <span class="error-message" id="email-error"></span>
         </div>
         <div>
           <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5"></textarea>
+          <span class="error-message" id="message-error"></span>
         </div>
         <button type="submit">Send</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
 
@@ -149,3 +155,6 @@
 
 </body>
 </html>
+
+
+
