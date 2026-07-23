@@ -41,3 +41,11 @@ I'm Vaishnavi PS, a second-year B.Tech Artificial Intelligence & Data Science st
 - [x] Deliberate box model: consistent padding inside cards, margin between sections
 - [x] 3+ separate, meaningful commits
 
+## Day 4
+
+- [x] Created `script.js` and linked it with `<script src="script.js" defer>`
+- [x] Working dark-mode toggle — button toggles a `light-mode` class on `<body>` (choice remembered via `localStorage`)
+- [x] Contact form validated on submit: empty fields show an error, bad email format shows "Please enter a valid email."
+- [x] `e.preventDefault()` stops the real submit; a friendly success message shows when everything is valid
+- [x] 3+ separate, meaningful commits
+
